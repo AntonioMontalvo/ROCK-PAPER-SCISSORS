@@ -1,0 +1,46 @@
+#game {
+  background-color: lightblue;
+  width: 768px;
+  margin: 0 auto;
+  height: 300px;
+}
+h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin:15px 0;
+}
+h2 {
+  float:left;
+
+  font-size: 18px;
+  margin:15px 10px 5px
+}
+h4 {
+  font-size: 18px;
+  color: red;
+    display: table;
+    margin: 0 auto;
+}
+
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+input {
+border: 2px solid green;
+margin: 10px ;
+margin-left: 50px
+text-align: center;
+}
+button {
+    display: list-item;
+    margin: 0 auto;
+    padding: 10px;
+}
+.subhead{
+  display: table;
+  margin: 0 auto;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--Pseudo
+  *Player1 = user vs Player2 = computer
+  *get input from Player1 and store it
+  *get input from Player2 (randomly) and store it
+  *compare inputs
+  *declare winner
+  -->
+
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Template</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="game">
+  <h1>"ROCK, PAPER, SCISSORS"</h1>
+<div class="subhead">
+	<h2>Enter your choice: Rock, Paper or Scissors</h2>
+	<input type="text" id="userGuess" onkeyup="player1Display()">
+</div>
+
+
+<p>You say:  <span id="choose"></span></p>
+<button onclick="getInputs()">Submit Your Choice</button></br>
+<!-- <button onclick="showResult()">Show Result</button></br> -->
+<h4 id="final"></h4>
+
+</div>
+
+<script type="text/javascript">
+//onkeyup Event Execute a JavaScript when a user releases a key
+//The keyboardevent keyCode property gets Unicode value of the pressed keyboard key:
+//The static String.fromCharCode() method returns a string created by using the specified sequence of Unicode values.
+//The innerHTML property sets or returns the HTML content (inner HTML) of an element. //getElementById(id) Returns a reference to the element by its ID; the ID is a string which can be used to identify the element; it can be established using the id attribute in HTML, or from script.
+//.value The value property sets or returns the value of the option (the value to be sent to the server when the form is submitted).
+//Math.random Return a random number between 0 (inclusive) and 1 (exclusive):
+
+function player1Display() {
+  var player1 = document.getElementById("userGuess").value.toUpperCase();
+  document.getElementById("choose").innerHTML = player1;
+}
+
+function getInputs(){
+  var player1 = document.getElementById("userGuess").value.toUpperCase()
+  console.log(player1);
+  var choice = ["ROCK", "PAPER", "SCISSORS"];
+  var computerGuess =  Math.floor(Math.random() * 3);
+// ROCK OPTIONS
+    if (choice[computerGuess] == "ROCK" && player1 == "ROCK"){
+      document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " It's a tie";}
+    if (choice[computerGuess] == "ROCK" && player1 == "PAPER"){
+        document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " You win!";}
+    if (choice[computerGuess] == "ROCK" && player1 == "SCISSORS"){
+        document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " ha! Looser!";}
+
+// PAPER OPTIONS
+    if (choice[computerGuess] == "PAPER" && player1 == "PAPER"){
+      document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " It's a tie";}
+    if (choice[computerGuess] == "PAPER" && player1 == "SCISSORS"){
+        document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " You win!";}
+    if (choice[computerGuess] == "PAPER" && player1 == "ROCK"){
+        document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " ha! Looser!";}
+
+// PAPER OPTIONS
+    if (choice[computerGuess] == "SCISSORS" && player1 == "SCISSORS"){
+      document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " It's a tie";}
+    if (choice[computerGuess] == "SCISSORS" && player1 == "ROCK"){
+        document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " You win!";}
+    if (choice[computerGuess] == "SCISSORS" && player1 == "PAPER"){
+        document.getElementById("final").innerHTML = "Computer says: " + choice[computerGuess] + " ha! Looser!";}
+  }
+</script>
+<footer>
+  <p class="copyright">Copyright 2016, Antonio Montalvo</p>
+</footer>
+</body>
+</html>
